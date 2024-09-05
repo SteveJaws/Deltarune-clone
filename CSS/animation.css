@@ -1,0 +1,19 @@
+.enemy-attack-screen{
+    width: 40%;
+    height: 65%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid green;
+    animation: slide-in 0.5s ease-in;
+}
+
+@keyframes slide-in{
+    0%{
+        top: -150%;
+    }
+    100%{
+        top: 50%;
+    }
+}
