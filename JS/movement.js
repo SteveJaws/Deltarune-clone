@@ -40,7 +40,7 @@ document.addEventListener('keyup', (e) => {
 
 function loop(){
     if(keyRight){
-        if(moveX < scherm.clientWidth - parseInt(player.style.width)){
+        if(moveX < scherm.clientWidth - parseInt(player.clientWidth)){
             if(keyUp || keyDown){
                 moveX += 3 * 0.7;
             }
@@ -74,7 +74,7 @@ function loop(){
         }
     }
     if(keyDown){
-        if(moveY < scherm.clientHeight - parseInt(player.style.height)){
+        if(moveY < scherm.clientHeight - parseInt(player.clientHeight)){
             if(keyRight || keyLeft){
                 moveY += 3 * 0.7;
             }

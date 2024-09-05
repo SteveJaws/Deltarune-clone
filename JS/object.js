@@ -3,8 +3,8 @@ let bottom;
 
 window.addEventListener('DOMContentLoaded', () => {
     player = document.createElement('div');
-    player.style.width = '25px';
-    player.style.height = '25px';
+    player.style.width = '2vw';
+    player.style.height = '2vw';
     player.style.backgroundColor = 'red';    
     player.style.position = 'absolute';
     player.id = 'player';
