@@ -30,7 +30,6 @@ class Enemy {
     }
 
     checkForPlayer(){
-
         this.moveLeft = parseInt(player.style.left);
         this.moveTop = parseInt(player.style.top);
         
@@ -51,18 +50,16 @@ class Enemy {
         else if(currentLeft > targetLeft){
             this.enemy.style.left = currentLeft - this.speed + "px";
         }
-        else{
-            this.enemy.style.left = currentLeft + "px";
-        }
         if(currentTop < targetTop){
             this.enemy.style.top = currentTop + this.speed + "px";
         }
         else if(currentTop > targetTop){
             this.enemy.style.top = currentTop - this.speed + "px";
         }
-        else{
-            this.enemy.style.top = currentTop + "px";
-        }
+
+        // here i am gonna check if the enemy touches the player
+
+        
 
         requestAnimationFrame(this.follow);
     }

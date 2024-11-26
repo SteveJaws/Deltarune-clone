@@ -13,11 +13,20 @@ function attackChooser(){
 }
 
 function attack0(){
-    for(let i = 0; i < 20; i++){
+    let enemies = [];
+    for(let i = 0; i < 10; i++){
         let enemy = new Enemy(Math.floor(Math.random() * scherm.clientWidth), Math.floor(Math.random() * scherm.clientHeight), Math.floor(Math.random() * 6));
         enemy.create();
         enemy.checkForPlayer();
         enemy.follow();
-    }
 
+        enemies.push(enemy);
+    }
+    setTimeout(() => {
+        enemies.forEach((enemy) =>{
+            if(enemy.enemy){
+                enemy.enemy.remove();
+            }
+        })
+    },5000)
 }
