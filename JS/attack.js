@@ -13,7 +13,11 @@ function attackChooser(){
 }
 
 function attack0(){
-    let enemy1 = new Enemy("test");
-    enemy1.create();
-    enemy1.follow();
+    for(let i = 0; i < 20; i++){
+        let enemy = new Enemy(Math.floor(Math.random() * scherm.clientWidth), Math.floor(Math.random() * scherm.clientHeight), Math.floor(Math.random() * 6));
+        enemy.create();
+        enemy.checkForPlayer();
+        enemy.follow();
+    }
+
 }

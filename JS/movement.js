@@ -23,7 +23,6 @@ document.addEventListener('keydown', (e) => {
 });
 
 document.addEventListener('keyup', (e) => {
-    console.log(moveX);
     if (e.key === 'ArrowRight') {
         keyRight = false;
     }
