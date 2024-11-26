@@ -15,7 +15,7 @@ function attackChooser(){
 function attack0(){
     let enemies = [];
     for(let i = 0; i < 10; i++){
-        let enemy = new Enemy(Math.floor(Math.random() * scherm.clientWidth), Math.floor(Math.random() * scherm.clientHeight), Math.floor(Math.random() * 6));
+        let enemy = new Enemy(Math.floor(Math.random() * scherm.clientWidth), Math.floor(Math.random() * scherm.clientHeight), Math.floor(Math.random() * 4));
         enemy.create();
         enemy.checkForPlayer();
         enemy.follow();
@@ -24,9 +24,9 @@ function attack0(){
     }
     setTimeout(() => {
         enemies.forEach((enemy) =>{
-            if(enemy.enemy){
-                enemy.enemy.remove();
-            }
+            enemy.enemy.remove();
+            enemy.remove();
+            menu();
         })
     },5000)
 }
