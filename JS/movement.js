@@ -23,10 +23,10 @@ document.addEventListener('keydown', (e) => {
 });
 
 document.addEventListener('keyup', (e) => {
-    if (e.key === 'ArrowRight') {
+    if (e.key === 'ArrowRight'){
         keyRight = false;
     }
-    if (e.key === 'ArrowLeft') {
+    if (e.key === 'ArrowLeft'){
         keyLeft = false;
     }
     if(e.key === 'ArrowUp'){

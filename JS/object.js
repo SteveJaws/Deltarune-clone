@@ -1,6 +1,8 @@
 let player;
 let bottom;
 let immune = false;
+let health = 100;
+document.getElementById('healthDisplay').innerHTML = health;
 
 window.addEventListener('DOMContentLoaded', () => {
     player = document.createElement('div');
@@ -77,7 +79,8 @@ window.addEventListener('DOMContentLoaded', () => {
 function takeDamage(){
     if(immune == false){
         console.log('damage');
-
+        health--;
+        document.getElementById('healthDisplay').innerHTML = health;
         immune = true;
 
         setTimeout(() => {
