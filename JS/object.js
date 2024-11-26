@@ -82,7 +82,7 @@ function takeDamage(){
 
         setTimeout(() => {
             immune = false;
-        },2000)
+        },700)
     }
     else{
         return;

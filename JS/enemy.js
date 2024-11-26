@@ -60,7 +60,7 @@ class Enemy {
 
         // here i am gonna check if the enemy touches the player
 
-        //checks if you have been hit from the side
+        //checks if the enemy touches the player on the sides
         if(!(currentLeft < targetLeft - 5 || currentLeft > targetLeft + 5)){
             hitSide = true;
         }
@@ -68,7 +68,7 @@ class Enemy {
             hitSide = false;
         }
 
-        //checks if you have been hit from the top or bottom
+        //checks if the enemy touches the player on the top or bottom
         if(!(currentTop < targetTop - 5 || currentTop > targetTop + 5)){
             hitTop = true;
         }

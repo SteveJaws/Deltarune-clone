@@ -8,16 +8,16 @@ let keyUp = false;
 let keyDown = false;
 
 document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowRight') {
+    if (e.key === 'ArrowRight' && vecht == true) {
         keyRight = true;
     }
-    if (e.key === 'ArrowLeft') {
+    if (e.key === 'ArrowLeft' && vecht == true) {
         keyLeft = true;
     }
-    if(e.key === 'ArrowUp'){
+    if(e.key === 'ArrowUp' && vecht == true){
         keyUp = true;
     }
-    if(e.key === 'ArrowDown'){
+    if(e.key === 'ArrowDown' && vecht == true){
         keyDown = true;
     }
 });
