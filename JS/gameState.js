@@ -1,0 +1,4 @@
+function fight(){
+    enemyAttackScreenSlideDown();
+    attackChooser();
+}
