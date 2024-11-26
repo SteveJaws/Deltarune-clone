@@ -15,7 +15,7 @@ function attackChooser(){
 function attack0(){
     let enemies = [];
     for(let i = 0; i < 10; i++){
-        let enemy = new Enemy(Math.floor(Math.random() * (scherm.clientWidth - 150) + 150), Math.floor(Math.random() * (scherm.clientWidth - 150) + 150), Math.floor(Math.random() * 4));
+        let enemy = new Enemy(Math.floor(Math.random() * (scherm.clientWidth - 150) + 150), Math.floor(Math.random() * (scherm.clientWidth - 150) + 150), Math.floor(Math.random() * 3));
         enemy.create();
         enemy.checkForPlayer();
         enemy.follow();
@@ -28,5 +28,5 @@ function attack0(){
             enemy.remove();
             menu();
         })
-    },5000)
+    },5000) //length of attack
 }

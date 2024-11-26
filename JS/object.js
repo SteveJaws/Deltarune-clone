@@ -85,7 +85,7 @@ function takeDamage(){
 
         setTimeout(() => {
             immune = false;
-        },700)
+        },500) //length of immune timer after getting hit
     }
     else{
         return;
