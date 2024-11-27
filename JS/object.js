@@ -8,13 +8,13 @@ window.addEventListener('DOMContentLoaded', () => {
     player = document.createElement('div');
     player.style.width = '2vw';
     player.style.height = '2vw';
-    player.style.backgroundColor = 'red'; 
     player.style.position = 'absolute';
     player.style.left = 0 + "px";
     player.style.top = 0 + "px";
     player.style.display = "flex";
     player.style.alignItems = "center";
     player.style.justifyContent = "center";
+    player.classList.add('player-soul');
     player.id = 'player';
 
     document.getElementById('enemyAttackScreen').appendChild(player);

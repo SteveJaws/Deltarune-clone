@@ -28,5 +28,5 @@ function attack0(){
             enemy.remove();
             menu();
         })
-    },5000) //length of attack
+    },20000) //length of attack
 }

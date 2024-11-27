@@ -7,6 +7,8 @@ class Enemy {
         else{
             this.speed = speed;
         }
+        this.hitBoxLengthRight = Math.ceil(window.innerWidth * 0.012); //this is almost perfect 
+        this.hitBoxLengthLeft = Math.ceil(window.innerWidth * 0.0025); //this is almost perfect
         this.left = left;
         this.top = top;
         this.moveLeft = 0;
@@ -39,6 +41,11 @@ class Enemy {
     }
 
     follow(){
+        if(this.dead == true){
+            return;
+        }
+        console.log('right: ' + this.hitBoxLengthRight);
+        console.log('left: ' + this.hitBoxLengthLeft );
         let hitSide = false;
         let hitTop = false;
         let currentLeft = parseInt(this.enemy.style.left);
@@ -61,7 +68,7 @@ class Enemy {
         // here i am gonna check if the enemy touches the player
 
         //checks if the enemy touches the player on the sides
-        if(!(currentLeft < targetLeft - 5 || currentLeft > targetLeft + 5)){
+        if(!(currentLeft < targetLeft - this.hitBoxLengthLeft || currentLeft > targetLeft + this.hitBoxLengthRight)){
             hitSide = true;
         }
         else{
@@ -69,7 +76,7 @@ class Enemy {
         }
 
         //checks if the enemy touches the player on the top or bottom
-        if(!(currentTop < targetTop - 5 || currentTop > targetTop + 5)){
+        if(!(currentTop < targetTop - this.hitBoxLengthLeft || currentTop > targetTop + this.hitBoxLengthRight)){
             hitTop = true;
         }
         else{

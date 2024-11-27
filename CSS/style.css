@@ -62,3 +62,10 @@ body{
     cursor: pointer;
     scale: 1.3;
 }
+
+.player-soul{
+    background-image: url(./Media/Player-soul.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
