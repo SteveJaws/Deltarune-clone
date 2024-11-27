@@ -7,14 +7,14 @@ class Arrow{
         this.targetLeft = parseInt(player.style.left);
         this.targetTop = parseInt(player.style.top);
         this.shoot = this.shoot.bind(this);
-        this.speed = 3;
+        this.speed = 1.7;
         this.dead = false;
     }
 
     spawn(){
         this.arrow = document.createElement('div');
-        this.arrow.style.width = "2vw";
-        this.arrow.style.height = "2vw";
+        this.arrow.style.width = "4vw";
+        this.arrow.style.height = "4vw";
         this.arrow.style.position = "absolute";
         this.arrow.style.left = this.spawnX + "px";
         this.arrow.style.top = this.spawnY + "px";
@@ -102,10 +102,57 @@ class Arrow{
             takeDamage();
         }
 
+        if(currentLeft > scherm.clientWidth || currentLeft < scherm.clientWidth - scherm.clientWidth || currentTop > scherm.clientHeight || currentTop < scherm.clientHeight - scherm.clientHeight){
+            this.explode();
+        }
+
         requestAnimationFrame(this.shoot);
     }
 
+    explode(){
+        this.remove();
+        for(let i = 0; i < 3; i++){
+            let ball = document.createElement('div');
+            ball.style.width = "1vw";
+            ball.style.height = "1vw";
+            ball.style.position = "absolute";
+            ball.style.left = parseInt(this.arrow.style.left) + "px";
+            ball.style.top = parseInt(this.arrow.style.top) + "px";
+            ball.style.backgroundColor = "white";
+            ball.style.borderRadius = "50%";
+    
+            // Randomize the direction and speed of each ball
+            let speedX = (Math.random() - 0.5) * 2; // Random speed between -1 and 1 for x direction
+            let speedY = (Math.random() - 0.5) * 2; // Random speed between -1 and 1 for y direction
+    
+            // Apply the movement to the ball
+            function moveBall() {
+                let currentLeft = parseFloat(ball.style.left);
+                let currentTop = parseFloat(ball.style.top);
+    
+                ball.style.left = currentLeft + speedX + "px";
+                ball.style.top = currentTop + speedY + "px";
+    
+                // Continue moving the ball
+                requestAnimationFrame(moveBall);
+            }
+    
+            // Start moving the ball
+            moveBall();
+    
+            document.getElementById('enemyAttackScreen').appendChild(ball);
+    
+            // Remove the ball after 2 seconds
+            setTimeout(() => {
+                ball.remove();
+            }, 5000);
+        }
+        this.dead = true;
+    }
+    
+
     remove(){
         this.dead = true;
+        this.arrow.remove();
     }
 }

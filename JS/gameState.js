@@ -11,7 +11,6 @@ function menu(){
 }
 
 function fight(){
-    console.log('fight');
     moveX = 0;
     moveY = 0;
     player.style.left = 0 + "px";

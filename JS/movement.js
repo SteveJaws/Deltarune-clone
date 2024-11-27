@@ -40,7 +40,6 @@ document.addEventListener('keyup', (e) => {
 });
 
 function loop(){
-    console.log(multiplier);
     if(keyRight){
         if(moveX < scherm.clientWidth - parseInt(player.clientWidth)){
             if(keyUp || keyDown){

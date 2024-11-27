@@ -78,7 +78,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 function takeDamage(){
     if(immune == false){
-        console.log('damage');
         health--;
         document.getElementById('healthDisplay').innerHTML = health;
         immune = true;
