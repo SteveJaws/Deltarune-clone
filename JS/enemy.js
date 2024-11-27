@@ -1,14 +1,13 @@
 class Enemy {
     constructor(left, top, speed){
-        console.log(speed);
         if(speed < 1){
             this.speed = 1;
         }
         else{
             this.speed = speed;
         }
-        this.hitBoxLengthRight = Math.ceil(window.innerWidth * 0.012); //this is almost perfect 
-        this.hitBoxLengthLeft = Math.ceil(window.innerWidth * 0.0025); //this is almost perfect
+        this.hitBoxLengthRight = Math.ceil(window.innerWidth * 0.01); //this is almost perfect right has to be on bottom and right 
+        this.hitBoxLengthLeft = Math.ceil(window.innerWidth * 0.0015); //this is almost perfect left has to be on top and left
         this.left = left;
         this.top = top;
         this.moveLeft = 0;
@@ -44,8 +43,6 @@ class Enemy {
         if(this.dead == true){
             return;
         }
-        console.log('right: ' + this.hitBoxLengthRight);
-        console.log('left: ' + this.hitBoxLengthLeft );
         let hitSide = false;
         let hitTop = false;
         let currentLeft = parseInt(this.enemy.style.left);

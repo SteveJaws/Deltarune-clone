@@ -1,0 +1,64 @@
+let arrows = [];
+let arrowChecker = false;
+let timer = false;
+let attack = false;
+
+function attack0(){
+    attack = true;
+    let enemies = []; // this is for spawning lots of goons
+    for(let i = 0; i < 10; i++){
+        let enemy = new Enemy(Math.floor(Math.random() * (scherm.clientWidth - 150) + 150), Math.floor(Math.random() * (scherm.clientWidth - 150) + 150), Math.floor(Math.random() * 3));
+        enemy.create();
+        enemy.checkForPlayer();
+        enemy.follow();
+
+        enemies.push(enemy);
+    }
+
+    arrowSpawnSystem();
+
+    setTimeout(() => { // timer to end the attack
+        enemies.forEach((enemy) =>{
+            enemy.enemy.remove();
+            enemy.remove();
+            menu();
+            attack = false;
+        })
+    },20000) //length of attack
+}
+
+function arrowSpawnSystem(){
+    if(attack == false){
+        console.log(arrows);
+        arrows.forEach((arrow) => {
+            arrow.remove();
+        })
+        arrows = [];
+        return;
+    }
+    if(arrowChecker == false){
+        arrowChecker = true;
+        timer = false;
+
+        let arrow = new Arrow(Math.floor(Math.random() * scherm.clientWidth), Math.floor(Math.random() * scherm.clientHeight));
+        arrow.spawn();
+        arrows.push(arrow);
+    }
+    if(timer == false){
+        timer = true;
+        setTimeout(() => {
+            arrowChecker = false;
+        },1000) // om de zoveel seconden spawnt hij een nieuwe arrow
+    }
+    arrowRepeater();   
+}
+
+function arrowRepeater(){
+    if(arrowChecker == false){
+        arrowSpawnSystem();
+    }
+    else{
+        console.log('repeat');
+        requestAnimationFrame(arrowRepeater);
+    }
+}   
