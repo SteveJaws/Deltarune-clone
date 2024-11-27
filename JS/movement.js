@@ -41,10 +41,10 @@ function loop(){
     if(keyRight){
         if(moveX < scherm.clientWidth - parseInt(player.clientWidth)){
             if(keyUp || keyDown){
-                moveX += 2.5 * 0.7;
+                moveX += 2.5 * 0.7 * (window.innerWidth / 2000);
             }
             else{
-                moveX += 2.5;
+                moveX += 2.5 * (window.innerWidth / 2000);
             }
             player.style.left = moveX + 'px';
         }
@@ -52,10 +52,10 @@ function loop(){
     if(keyLeft){
         if(moveX > scherm.clientWidth - scherm.clientWidth){
             if(keyUp || keyDown){
-                moveX -= 2.5 * 0.7;
+                moveX -= 2.5 * 0.7 * (window.innerWidth / 2000);
             }
             else{
-                moveX -= 2.5;
+                moveX -= 2.5 * (window.innerWidth / 2000);
             }
 
             player.style.left = moveX + 'px';
@@ -64,10 +64,10 @@ function loop(){
     if(keyUp){
         if(moveY > scherm.clientHeight - scherm.clientHeight){
             if(keyRight || keyLeft){
-                moveY -= 2.5 * 0.7;
+                moveY -= 2.5 * 0.7 * (window.innerWidth / 2000);
             }
             else{
-                moveY -= 2.5;
+                moveY -= 2.5 * (window.innerWidth / 2000);
             }
             player.style.top = moveY + 'px';
         }
@@ -75,10 +75,10 @@ function loop(){
     if(keyDown){
         if(moveY < scherm.clientHeight - parseInt(player.clientHeight)){
             if(keyRight || keyLeft){
-                moveY += 2.5 * 0.7;
+                moveY += 2.5 * 0.7 * (window.innerWidth / 2000);
             }
             else{
-                moveY += 2.5;
+                moveY += 2.5 * (window.innerWidth / 2000);
             }
             player.style.top = moveY + 'px';
         }

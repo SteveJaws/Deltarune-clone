@@ -1,12 +1,7 @@
 class Enemy {
     constructor(left, top, speed){
-        if(speed < 1){
-            this.speed = 1;
-        }
-        else{
-            this.speed = speed;
-        }
-        this.hitBoxLengthRight = Math.ceil(window.innerWidth * 0.01); //this is almost perfect 
+        this.speed = Math.ceil(window.innerWidth / 7000 * speed);
+        this.hitBoxLengthRight = Math.ceil(window.innerWidth * 0.012); //this is almost perfect 
         this.hitBoxLengthLeft = Math.ceil(window.innerWidth * 0.0025); //this is almost perfect
         this.left = left;
         this.top = top;

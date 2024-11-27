@@ -50,6 +50,7 @@ function arrowSpawnSystem(){
     if(timer == false){
         timer = true;
         setTimeout(() => {
+
             arrowChecker = false;
         },1000) // these are the seconds that it takes to spawn a new arrow
     }
