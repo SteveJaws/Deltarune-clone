@@ -8,12 +8,25 @@
     <link rel="stylesheet" href="./CSS/animation.css">
 </head>
 <body>
+    <div class="start" id="start">
+        you can click things with Z and move and select with the arrow keys
+        <button onclick="startGame()">start</button>
+    </div>
     <div class="scherm" id="scherm">
-        <div class="health-display">HEALTH: <div id="healthDisplay"></div></div>
+        <video class="background-video" src="./CSS/Media/Deltarune battle background.mp4" autoplay loop muted></video>
+        <div class="health-display" style="display: none;">HEALTH: <div id="healthDisplay"></div></div>
         <div class="characters-bg">
             <div class="enemy-attack-screen" id="enemyAttackScreen"></div>
         </div>
         <div class="info-bg">
+            <div class="me-info">
+                <div class="picture"></div>
+                <div class="name"></div>
+                <div class="health">
+                    <div class="health-top"></div>
+                    <div class="health-bottom"></div>
+                </div>
+            </div>
             <div class="options">
                 <div class="action" onclick="fight()">Fight</div>
                 <div class="action">Act</div>

@@ -1,11 +1,17 @@
 let vecht = false;
 
+function startGame(){
+    document.getElementById('start').style.display = "none";
+    document.getElementById('scherm').style.display = "block";
+}
+
 function menu(){
     vecht = false;
     enemyAttackScreenSlideUp();
 }
 
 function fight(){
+    console.log('fight');
     moveX = 0;
     moveY = 0;
     player.style.left = 0 + "px";

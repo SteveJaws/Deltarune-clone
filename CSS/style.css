@@ -3,11 +3,15 @@
 }
 
 body{
-    background-color: black;
+    background-color: red;
     overflow: hidden;
 }
 
-.scherm{
+.start{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     width: 100vw;
     height: 75vw;
     max-height: 100vh;
@@ -16,7 +20,20 @@ body{
     position: absolute;
     top:0;bottom:0;
     left:0;right:0;
-    background-color: grey;
+    background-color: red;
+}
+
+.scherm{
+    display: none;
+    width: 100vw;
+    height: 75vw;
+    max-height: 100vh;
+    max-width: 133.33vh;
+    margin: auto;
+    position: absolute;
+    top:0;bottom:0;
+    left:0;right:0;
+    background: transparent;
 }
 
 .health-display{
@@ -29,21 +46,80 @@ body{
 .characters-bg{
     width: 100%;
     height: 70%;
-    background-color: blue;
+}
+
+.background-video{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
 }
 
 .info-bg{
-    width: 100%;
-    height: 30%;
-    background-color: red;
+    width: 30vw;
+    height: 10vw;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 1vh;
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+}
+
+.me-info{
+    width: 100%;
+    height: 50%;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1%;
+}
+
+.picture{
+    width: 20%;
+    height: 100%;
+    background-color: red;
+}
+
+.name{
+    width: 30%;
+    height: 100%;
+    background-color: green;
+}
+
+.health{
+    width: 45%;
+    height: 100%;
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+}
+
+.health-top{
+    width: 90%;
+    height: 40%;
+    background-color: red;
+}
+
+.health-bottom{
+    width: 90%;
+    height: 40%;
+    background-color: green;
 }
 
 .options{
-    width: 75%;
-    height: 80%;
+    width: 100%;
+    height: 50%;
     background-color: yellow;
     display: flex;
     flex-direction: row;
