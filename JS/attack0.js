@@ -43,7 +43,9 @@ function arrowSpawnSystem(){
 
         let arrow = new Arrow(Math.floor(Math.random() * scherm.clientWidth), Math.floor(Math.random() * scherm.clientHeight));
         arrow.spawn();
-        arrow.shoot();
+        setTimeout(() => {
+            arrow.shoot();
+        },700)
         arrows.push(arrow);
     }
     if(timer == false){
