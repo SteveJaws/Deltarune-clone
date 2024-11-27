@@ -6,7 +6,8 @@ let keyRight = false;
 let keyLeft = false;
 let keyUp = false;
 let keyDown = false;
-let speed = 2.5;
+let multiplier = window.innerWidth / 100;
+let speed = 0.2 * multiplier;
 
 document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowRight' && vecht == true) {
@@ -39,6 +40,7 @@ document.addEventListener('keyup', (e) => {
 });
 
 function loop(){
+    console.log(multiplier);
     if(keyRight){
         if(moveX < scherm.clientWidth - parseInt(player.clientWidth)){
             if(keyUp || keyDown){
