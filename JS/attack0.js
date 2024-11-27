@@ -7,7 +7,7 @@ function attack0(){
     attack = true;
     let enemies = []; // this is for spawning lots of goons
     for(let i = 0; i < 10; i++){
-        let enemy = new Enemy(Math.floor(Math.random() * (scherm.clientWidth - 150) + 150), Math.floor(Math.random() * (scherm.clientWidth - 150) + 150), Math.floor(Math.random() * 3));
+        let enemy = new Enemy(Math.floor(Math.random() * (scherm.clientWidth - 150) + 150), Math.floor(Math.random() * (scherm.clientWidth - 150) + 150), Math.random() * 2.1);
         enemy.create();
         enemy.checkForPlayer();
         enemy.follow();
@@ -29,7 +29,6 @@ function attack0(){
 
 function arrowSpawnSystem(){
     if(attack == false){
-        console.log(arrows);
         arrows.forEach((arrow) => {
             arrow.arrow.remove();
             arrow.remove();
@@ -62,7 +61,6 @@ function arrowRepeater(){
         arrowSpawnSystem();
     }
     else{
-        console.log('repeat');
         requestAnimationFrame(arrowRepeater);
     }
 }   

@@ -6,8 +6,8 @@ class Enemy {
         else{
             this.speed = speed;
         }
-        this.hitBoxLengthRight = Math.ceil(window.innerWidth * 0.01); //this is almost perfect right has to be on bottom and right 
-        this.hitBoxLengthLeft = Math.ceil(window.innerWidth * 0.0015); //this is almost perfect left has to be on top and left
+        this.hitBoxLengthRight = Math.ceil(window.innerWidth * 0.01); //this is almost perfect 
+        this.hitBoxLengthLeft = Math.ceil(window.innerWidth * 0.0025); //this is almost perfect
         this.left = left;
         this.top = top;
         this.moveLeft = 0;

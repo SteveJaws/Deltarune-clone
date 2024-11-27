@@ -12,5 +12,7 @@ function fight(){
     player.style.top = 0 + "px";
     vecht = true;
     enemyAttackScreenSlideDown();
-    attackChooser();
+    setTimeout(() => {
+        attackChooser();
+    },800) // timer gives you time to adjust to that you are playing
 }
