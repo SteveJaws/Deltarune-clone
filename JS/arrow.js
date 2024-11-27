@@ -7,18 +7,18 @@ class Arrow{
         this.targetLeft = parseInt(player.style.left);
         this.targetTop = parseInt(player.style.top);
         this.shoot = this.shoot.bind(this);
-        this.speed = 4.2;
+        this.speed = 3;
         this.dead = false;
     }
 
     spawn(){
         this.arrow = document.createElement('div');
-        this.arrow.style.width = "1vw";
-        this.arrow.style.height = "1vw";
-        this.arrow.style.backgroundColor = "white";
+        this.arrow.style.width = "2vw";
+        this.arrow.style.height = "2vw";
         this.arrow.style.position = "absolute";
         this.arrow.style.left = this.spawnX + "px";
         this.arrow.style.top = this.spawnY + "px";
+        this.arrow.classList.add("spade-projectile");
 
         document.getElementById('enemyAttackScreen').appendChild(this.arrow);
 
@@ -43,11 +43,23 @@ class Arrow{
         else if(this.currentTop > this.targetTop){
             this.moveUp = true;
         }
+
+        if(this.moveRight == true && this.moveDown == true){
+            this.arrow.style.rotate = "130deg";
+        }
+        if(this.moveRight == true && this.moveUp == true){
+            this.arrow.style.rotate = "50deg";
+        }
+        if(this.moveLeft == true && this.moveDown == true){
+            this.arrow.style.rotate = "230deg";
+        }
+        if(this.moveLeft == true && this.moveUp == true){
+            this.arrow.style.rotate = "310deg";
+        }
     }
 
     shoot(){
         if(this.dead == true){
-            console.log('i am dead');
             return;
         }
         let hitSide = false;

@@ -74,3 +74,11 @@ body{
     background-size: contain;
     background-repeat: no-repeat;
 }
+
+.spade-projectile{
+    background-image: url(./Media/spade_projectile.png);
+    background-color: transparent;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
