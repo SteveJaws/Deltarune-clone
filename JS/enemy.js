@@ -1,6 +1,12 @@
 class Enemy {
     constructor(left, top, speed){
-        this.speed = Math.ceil(window.innerWidth / 7000 * speed);
+        console.log(speed);
+        if(speed < 1){
+            this.speed = 1;
+        }
+        else{
+            this.speed = speed;
+        }
         this.hitBoxLengthRight = Math.ceil(window.innerWidth * 0.012); //this is almost perfect 
         this.hitBoxLengthLeft = Math.ceil(window.innerWidth * 0.0025); //this is almost perfect
         this.left = left;
@@ -48,13 +54,13 @@ class Enemy {
             this.enemy.style.left = currentLeft + this.speed + "px";
         }
         else if(currentLeft > targetLeft){
-            this.enemy.style.left = currentLeft - this.speed + "px";
+            this.enemy.style.left = currentLeft - (this.speed / 2.5) + "px";
         }
         if(currentTop < targetTop){
             this.enemy.style.top = currentTop + this.speed + "px";
         }
         else if(currentTop > targetTop){
-            this.enemy.style.top = currentTop - this.speed + "px";
+            this.enemy.style.top = currentTop - (this.speed / 2.5) + "px";
         }   
 
         // here i am gonna check if the enemy touches the player
