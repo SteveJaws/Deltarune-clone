@@ -17,8 +17,8 @@ class Arrow{
         console.log("playerTop: " + this.targetTop);
 
         this.arrow = document.createElement('div');
-        this.arrow.style.width = "10px";
-        this.arrow.style.height = "10px";
+        this.arrow.style.width = "1vw";
+        this.arrow.style.height = "1vw";
         this.arrow.style.backgroundColor = "white";
         this.arrow.style.position = "absolute";
         this.arrow.style.left = this.spawnX + "px";
@@ -50,8 +50,11 @@ class Arrow{
     }
 
     shoot(){
+        let targetLeft = parseInt(player.style.left);
+        let targetTop = parseInt(player.style.top);
         let currentLeft = parseInt(this.arrow.style.left);
         let currentTop = parseInt(this.arrow.style.top);
+
         if(this.moveRight == true){
             this.arrow.style.left = currentLeft + this.speed + "px";
         }
