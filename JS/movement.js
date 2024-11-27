@@ -6,6 +6,7 @@ let keyRight = false;
 let keyLeft = false;
 let keyUp = false;
 let keyDown = false;
+let speed = 2.5;
 
 document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowRight' && vecht == true) {
@@ -41,10 +42,10 @@ function loop(){
     if(keyRight){
         if(moveX < scherm.clientWidth - parseInt(player.clientWidth)){
             if(keyUp || keyDown){
-                moveX += 2.5 * 0.7 * (window.innerWidth / 2000);
+                moveX += speed * 0.7;
             }
             else{
-                moveX += 2.5 * (window.innerWidth / 2000);
+                moveX += speed;
             }
             player.style.left = moveX + 'px';
         }
@@ -52,10 +53,10 @@ function loop(){
     if(keyLeft){
         if(moveX > scherm.clientWidth - scherm.clientWidth){
             if(keyUp || keyDown){
-                moveX -= 2.5 * 0.7 * (window.innerWidth / 2000);
+                moveX -= speed * 0.7;
             }
             else{
-                moveX -= 2.5 * (window.innerWidth / 2000);
+                moveX -= speed;
             }
 
             player.style.left = moveX + 'px';
@@ -64,10 +65,10 @@ function loop(){
     if(keyUp){
         if(moveY > scherm.clientHeight - scherm.clientHeight){
             if(keyRight || keyLeft){
-                moveY -= 2.5 * 0.7 * (window.innerWidth / 2000);
+                moveY -= speed * 0.7;
             }
             else{
-                moveY -= 2.5 * (window.innerWidth / 2000);
+                moveY -= speed;
             }
             player.style.top = moveY + 'px';
         }
@@ -75,10 +76,10 @@ function loop(){
     if(keyDown){
         if(moveY < scherm.clientHeight - parseInt(player.clientHeight)){
             if(keyRight || keyLeft){
-                moveY += 2.5 * 0.7 * (window.innerWidth / 2000);
+                moveY += speed * 0.7;
             }
             else{
-                moveY += 2.5 * (window.innerWidth / 2000);
+                moveY += speed;
             }
             player.style.top = moveY + 'px';
         }
