@@ -21,9 +21,9 @@ function attack0(){
         enemies.forEach((enemy) =>{
             enemy.enemy.remove();
             enemy.remove();
-            menu();
-            attack = false;
         })
+        menu();
+        attack = false;
     },20000) //length of attack
 }
 
@@ -31,6 +31,7 @@ function arrowSpawnSystem(){
     if(attack == false){
         console.log(arrows);
         arrows.forEach((arrow) => {
+            arrow.arrow.remove();
             arrow.remove();
         })
         arrows = [];
@@ -42,13 +43,14 @@ function arrowSpawnSystem(){
 
         let arrow = new Arrow(Math.floor(Math.random() * scherm.clientWidth), Math.floor(Math.random() * scherm.clientHeight));
         arrow.spawn();
+        arrow.shoot();
         arrows.push(arrow);
     }
     if(timer == false){
         timer = true;
         setTimeout(() => {
             arrowChecker = false;
-        },1000) // om de zoveel seconden spawnt hij een nieuwe arrow
+        },1000) // these are the seconds that it takes to spawn a new arrow
     }
     arrowRepeater();   
 }
