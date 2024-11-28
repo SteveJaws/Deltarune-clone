@@ -3,14 +3,14 @@
 * {
     font-family: "Silkscreen", sans-serif;
     color: white;
-    overflow: hidden;
     padding: 0;
     margin: 0;
 }
 
 body{
+    width: 100vw;
+    height: 100vh;
     background-color: red;
-    overflow: hidden;
 }
 
 .start{
@@ -63,9 +63,9 @@ body{
 }
 
 .info-bg{
-    width: 30vw;
-    height: 10vw;
-    border: 0.5vw solid rgba(0,255,255,255);
+    width: 30%;
+    height: 15%;
+    border: 0.25vw solid rgba(0,255,255,255);
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -80,7 +80,7 @@ body{
 .me-info{
     width: 100%;
     height: 50%;
-    border-bottom: 0.25vw solid rgba(0,255,255,255);
+    border-bottom: 0.125vw solid rgba(0,255,255,255);
     background-color: black;
     display: flex;
     align-items: center;
@@ -100,7 +100,7 @@ body{
 .name{
     width: 30%;
     height: 100%;
-    font-size: 3.5vw;
+    font-size: 2vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -119,7 +119,7 @@ body{
 .health-top{
     width: 90%;
     height: 40%;
-    font-size: 2.2vw;
+    font-size: 1vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -151,7 +151,7 @@ body{
 .options{
     width: 100%;
     height: 45%;
-    border-top: 0.25vw solid rgba(0,255,255,255);
+    border-top: 0.125vw solid rgba(0,255,255,255);
     background-color: yellow;
     display: flex;
     flex-direction: row;
@@ -196,12 +196,11 @@ body{
 }
 
 .interacting{
-   width: 90vw;
-   height: 17%;
+   width: 90%;
+   height: 10%;
    background-color: black;
    border: 0.5vw solid white;
    margin-left: auto;
    margin-right: auto;
    position: relative;
-   bottom: 1vw;
 }
