@@ -152,6 +152,10 @@ body{
 }
 
 .spade-projectile{
+    background-color: red;
+}
+
+.spade-sprite{
     background-image: url(./Media/spade_projectile.png);
     background-color: transparent;
     background-position: center;

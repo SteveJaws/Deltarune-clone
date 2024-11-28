@@ -22,6 +22,15 @@ class Arrow{
 
         document.getElementById('enemyAttackScreen').appendChild(this.arrow);
 
+        this.spadeSprite = document.createElement("div");
+        this.spadeSprite.style.width = "100%";
+        this.spadeSprite.style.height = "100%";
+        this.spadeSprite.style.left = parseInt(this.arrow.style.left) + "px";
+        this.spadeSprite.style.top = parseInt(this.arrow.style.top) + "px";
+        this.spadeSprite.classList.add('spade-sprite');
+
+        this.arrow.appendChild(this.spadeSprite);
+
         this.moveRight = false;
         this.moveLeft = false;
         this.moveUp = false;
@@ -45,18 +54,18 @@ class Arrow{
         }
 
         if(this.moveRight == true && this.moveDown == true){
-            this.arrow.style.rotate = "130deg";
+            this.spadeSprite.style.rotate = "130deg";
             this.speed = this.speed * 1.2;
         }
         if(this.moveRight == true && this.moveUp == true){
-            this.arrow.style.rotate = "50deg";
+            this.spadeSprite.style.rotate = "50deg";
         }
         if(this.moveLeft == true && this.moveDown == true){
-            this.arrow.style.rotate = "230deg";
+            this.spadeSprite.style.rotate = "230deg";
             this.speed = this.speed * 1.2;
         }
         if(this.moveLeft == true && this.moveUp == true){
-            this.arrow.style.rotate = "310deg";
+            this.spadeSprite.style.rotate = "310deg";
         }
     }
 
