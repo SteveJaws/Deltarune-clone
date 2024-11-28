@@ -75,10 +75,10 @@ class Arrow{
         }
         let hitSide = false;
         let hitTop = false;
-        let targetLeft = parseInt(player.style.left);
-        let targetTop = parseInt(player.style.top);
         let currentLeft = parseInt(this.arrow.style.left);
         let currentTop = parseInt(this.arrow.style.top);
+        let arrowRect = this.arrow.getBoundingClientRect();
+        let playerRect = player.getBoundingClientRect();
 
         if(this.moveRight == true){
             this.arrow.style.left = currentLeft + this.speed + "px";
@@ -95,15 +95,8 @@ class Arrow{
 
         //here i am gonna check if the arrow touches the player if thats the case damage them ofcourse
 
-        if(currentLeft - this.hitBoxLengthLeft <= targetLeft && currentLeft + this.hitBoxLengthRight >= targetLeft){
-            hitSide = true;
-        }
-
-        if(currentTop - this.hitBoxLengthLeft <= targetTop && currentTop + this.hitBoxLengthRight >= targetTop){
-            hitTop = true;
-        }
-
-        if(hitSide == true && hitTop == true && this.dead == false){
+        if(arrowRect.left < playerRect.right && arrowRect.right > playerRect.left && arrowRect.top < playerRect.bottom && arrowRect.bottom > playerRect.top){
+            this.arrow.remove();
             takeDamage();
         }
 
@@ -114,9 +107,9 @@ class Arrow{
         requestAnimationFrame(this.shoot);
     }
 
-    explode(){
+    explode() {
         this.remove();
-        for(let i = 0; i < 3; i++){
+        for (let i = 0; i < 3; i++) {
             let ball = document.createElement('div');
             ball.style.width = "1vw";
             ball.style.height = "1vw";
@@ -126,11 +119,30 @@ class Arrow{
             ball.style.backgroundColor = "white";
             ball.style.borderRadius = "50%";
     
-            // Randomize the direction and speed of each ball
-            let speedX = (Math.random() - 0.5) * 2; // Random speed between -1 and 1 for x direction
-            let speedY = (Math.random() - 0.5) * 2; // Random speed between -1 and 1 for y direction
+            // Append the ball to the screen
+            document.getElementById('enemyAttackScreen').appendChild(ball);
     
-            // Apply the movement to the ball
+            // Randomize ball direction
+            let speedX = (Math.random() - 0.5) * 2; // Between -1 and 1
+            let speedY = (Math.random() - 0.5) * 2;
+    
+            // Collision detection function
+            function checkCollision() {
+                let ballRect = ball.getBoundingClientRect();
+                let playerRect = player.getBoundingClientRect();
+    
+                // Check overlap
+                if (
+                    ballRect.left < playerRect.right && 
+                    ballRect.right > playerRect.left &&
+                    ballRect.top < playerRect.bottom &&
+                    ballRect.bottom > playerRect.top
+                ) {
+                    takeDamage();
+                }
+            }
+    
+            // Ball movement logic
             function moveBall() {
                 let currentLeft = parseFloat(ball.style.left);
                 let currentTop = parseFloat(ball.style.top);
@@ -138,14 +150,15 @@ class Arrow{
                 ball.style.left = currentLeft + speedX + "px";
                 ball.style.top = currentTop + speedY + "px";
     
-                // Continue moving the ball
+                // Check for collision during movement
+                checkCollision();
+    
+                // Continue moving
                 requestAnimationFrame(moveBall);
             }
     
             // Start moving the ball
             moveBall();
-    
-            document.getElementById('enemyAttackScreen').appendChild(ball);
     
             // Remove the ball after 2 seconds
             setTimeout(() => {
@@ -154,6 +167,7 @@ class Arrow{
         }
         this.dead = true;
     }
+    
     
 
     remove(){
