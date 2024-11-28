@@ -2,7 +2,7 @@ let player;
 let bottom;
 let immune = false;
 let health = 100;
-document.getElementById('healthDisplay').innerHTML = health;
+document.getElementById('healthNumber').innerHTML = health;
 
 window.addEventListener('DOMContentLoaded', () => {
     player = document.createElement('div');
@@ -77,11 +77,16 @@ window.addEventListener('DOMContentLoaded', () => {
 })
 
 function takeDamage(damage){
-    console.log("damage taken: " + damage);
     if(immune == false){
         health = health - damage;
-        document.getElementById('healthDisplay').innerHTML = health;
         document.getElementById('healthBar').style.width = health + "%";
+        
+        if(health < 0){
+            document.getElementById('healthNumber').innerHTML = 0;
+        }
+        else{
+            document.getElementById('healthNumber').innerHTML = health;
+        }
         immune = true;
 
         setTimeout(() => {
