@@ -5,6 +5,7 @@
     color: white;
     padding: 0;
     margin: 0;
+    overflow: hidden;
 }
 
 body{
@@ -208,9 +209,43 @@ body{
 }
 
 .normal-block{
+    max-width: 50px;
+    max-height: 50px;
     background-color: orange;
 }
 
 .selected-block{
+    max-width: 50px;
+    max-height: 50px;
     background-color: red;
+}
+
+.kris-div{
+    width: 10vw;
+    height: 20vw;
+    max-width: 150px;
+    max-height: 150px;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-90%, -90%);
+    background-image: url(./Media/kris_idle.gif);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.enemy-div{
+    width: 20vw;
+    height: 25vw;
+    max-width: 243px;
+    max-height: 243px;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(-30%, -90%);
+    background-image: url(./Media/king_idle.gif);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
