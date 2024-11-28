@@ -6,8 +6,8 @@ document.getElementById('healthDisplay').innerHTML = health;
 
 window.addEventListener('DOMContentLoaded', () => {
     player = document.createElement('div');
-    player.style.width = '2vw';
-    player.style.height = '2vw';
+    player.style.width = '1.5vw';
+    player.style.height = '1.5vw';
     player.style.position = 'absolute';
     player.style.left = 0 + "px";
     player.style.top = 0 + "px";
