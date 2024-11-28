@@ -73,8 +73,6 @@ class Arrow{
         if(this.dead == true){
             return;
         }
-        let hitSide = false;
-        let hitTop = false;
         let currentLeft = parseInt(this.arrow.style.left);
         let currentTop = parseInt(this.arrow.style.top);
         let arrowRect = this.arrow.getBoundingClientRect();

@@ -1,0 +1,69 @@
+.sword_orange{
+    background-image: url(./Media/menuItems/sword_orange.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.sword_yellow{
+    background-image: url(./Media/menuItems/sword_yellow.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.act_orange{
+    background-image: url(./Media/menuItems/act_orange.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.act_yellow{
+    background-image: url(./Media/menuItems/act_yellow.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.item_orange{
+    background-image: url(./Media/menuItems/item_orange.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.item_yellow{
+    background-image: url(./Media/menuItems/item_yellow.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.mercy_orange{
+    background-image: url(./Media/menuItems/mercy_orange.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.mercy_yellow{
+    background-image: url(./Media/menuItems/mercy_yellow.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.defend_orange{
+    background-image: url(./Media/menuItems/defend_orange.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.defend_yellow{
+    background-image: url(./Media/menuItems/defend_yellow.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
