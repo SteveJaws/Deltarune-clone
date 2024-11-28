@@ -96,7 +96,6 @@ class Arrow{
         //here i am gonna check if the arrow touches the player if thats the case damage them ofcourse
 
         if(arrowRect.left < playerRect.right && arrowRect.right > playerRect.left && arrowRect.top < playerRect.bottom && arrowRect.bottom > playerRect.top){
-            this.arrow.remove();
             takeDamage();
         }
 
