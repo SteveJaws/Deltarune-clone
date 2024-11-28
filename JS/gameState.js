@@ -6,8 +6,10 @@ function startGame(){
 }
 
 function menu(){
-    vecht = false;
     enemyAttackScreenSlideUp();
+    setTimeout(() => {
+        vecht = false;
+    },1000) //timer before the menu controls come back
 }
 
 function fight(){
