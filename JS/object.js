@@ -79,6 +79,11 @@ window.addEventListener('DOMContentLoaded', () => {
 function takeDamage(damage){
     if(immune == false){
         health = health - damage;
+        document.getElementById('damageNumber').innerHTML = damage;
+        document.getElementById('damageNumber').style.display = "block";
+        setTimeout(() => {
+            document.getElementById('damageNumber').style.display = "none";
+        },990)
         document.getElementById('healthBar').style.width = health + "%";
         
         if(health < 0){

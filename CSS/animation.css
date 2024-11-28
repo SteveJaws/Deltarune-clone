@@ -34,3 +34,54 @@
         top: -150%;
     }
 }
+
+.damage-number{
+    display: none;
+    width: 2vw;
+    height: 2vw;
+    font-size: 1.5vw;
+    position: absolute;
+    animation: fallRightDown 1s ease-in-out;
+    opacity: 1;
+}
+
+@keyframes fallRightDown {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    15% {
+        top: 30%;
+        left: 10%;
+    }
+    30% {
+        top: 60%;
+        left: 25%;
+    }
+    45% {
+        top: 80%;
+        left: 40%;
+    }
+    55% {
+        top: 70%; /* Hoogste punt van de stuiter omhoog */
+        left: 45%;
+        opacity: 0.75;
+    }
+    70% {
+        top: 90%;
+        left: 48%;
+        opacity: 0.50;
+    }
+    85% {
+        top: 95%; /* Kleinere stuiter omhoog */
+        left: 49%;
+        opacity: 0.25;
+    }
+    100% {
+        top: 100%;
+        left: 50%;
+        opacity: 0;
+    }
+}
+
+
