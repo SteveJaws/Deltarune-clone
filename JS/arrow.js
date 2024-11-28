@@ -58,7 +58,7 @@ class Arrow{
             this.speed = this.speed * 1.2;
         }
         if(this.moveRight == true && this.moveUp == true){
-            this.spadeSprite.style.rotate = "50deg";
+            this.spadeSprite.style.rotate = "40deg";
         }
         if(this.moveLeft == true && this.moveDown == true){
             this.spadeSprite.style.rotate = "230deg";

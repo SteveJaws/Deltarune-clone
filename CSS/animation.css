@@ -37,9 +37,9 @@
 
 .damage-number{
     display: none;
-    width: 2vw;
-    height: 2vw;
-    font-size: 1.5vw;
+    width: 3vw;
+    height: 3vw;
+    font-size: 2.3vw;
     position: absolute;
     animation: fallRightDown 1s ease-in-out;
     opacity: 1;
