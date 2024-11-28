@@ -8,6 +8,7 @@ let keyUp = false;
 let keyDown = false;
 let multiplier = window.innerWidth / 100;
 let speed = 0.2 * multiplier;
+let playerIsDead = false;
 
 document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowRight' && vecht == true) {
@@ -40,7 +41,7 @@ document.addEventListener('keyup', (e) => {
 });
 
 function loop(){
-    if(keyRight){
+    if(keyRight && playerIsDead == false){
         if(moveX < scherm.clientWidth - parseInt(player.clientWidth)){
             if(keyUp || keyDown){
                 moveX += speed * 0.7;
@@ -51,7 +52,7 @@ function loop(){
             player.style.left = moveX + 'px';
         }
     }
-    if(keyLeft){
+    if(keyLeft && playerIsDead == false){
         if(moveX > scherm.clientWidth - scherm.clientWidth){
             if(keyUp || keyDown){
                 moveX -= speed * 0.7;
@@ -63,7 +64,7 @@ function loop(){
             player.style.left = moveX + 'px';
         }
     }
-    if(keyUp){
+    if(keyUp && playerIsDead == false){
         if(moveY > scherm.clientHeight - scherm.clientHeight){
             if(keyRight || keyLeft){
                 moveY -= speed * 0.7;
@@ -74,7 +75,7 @@ function loop(){
             player.style.top = moveY + 'px';
         }
     }
-    if(keyDown){
+    if(keyDown && playerIsDead == false){
         if(moveY < scherm.clientHeight - parseInt(player.clientHeight)){
             if(keyRight || keyLeft){
                 moveY += speed * 0.7;
@@ -86,6 +87,10 @@ function loop(){
         }
     }
     
+}
+
+function playerDeath(){
+    playerIsDead = true;
 }
 
 setInterval(loop, 10);

@@ -76,15 +76,27 @@ window.addEventListener('DOMContentLoaded', () => {
 
 })
 
-function takeDamage(){
+function takeDamage(damage){
+    console.log("damage taken: " + damage);
     if(immune == false){
-        health--;
+        health = health - damage;
         document.getElementById('healthDisplay').innerHTML = health;
+        document.getElementById('healthBar').style.width = health + "%";
         immune = true;
 
         setTimeout(() => {
             immune = false;
         },500) //length of immune timer after getting hit
+        if(health <= 0){ //checks if player is dead
+            document.getElementById('healthBar').style.width = 0 + "%";
+            playerDeath();
+            setTimeout(() => {
+                player.remove();
+                setTimeout(() => {
+                    window.location.reload();
+                },1000)
+            },1000)
+        }
     }
     else{
         return;

@@ -103,7 +103,7 @@ class Arrow{
             arrowRect.top - padding < playerRect.bottom + padding &&  // Expand the top edge
             arrowRect.bottom + padding > playerRect.top - padding     // Expand the bottom edge
         ) {
-            takeDamage();
+            takeDamage(10);
         }
 
         if(currentLeft > scherm.clientWidth || currentLeft < scherm.clientWidth - scherm.clientWidth || currentTop > scherm.clientHeight || currentTop < scherm.clientHeight - scherm.clientHeight){
@@ -144,7 +144,7 @@ class Arrow{
                     ballRect.top < playerRect.bottom &&
                     ballRect.bottom > playerRect.top
                 ) {
-                    takeDamage();
+                    takeDamage(5);
                 }
             }
     

@@ -139,7 +139,6 @@ body{
     height: 80%;
     background-color: rgba(140,0,0,255);
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
