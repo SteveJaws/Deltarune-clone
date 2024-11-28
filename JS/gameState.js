@@ -1,8 +1,9 @@
-let vecht = false;
+let vecht = true;
 
 function startGame(){
     document.getElementById('start').style.display = "none";
     document.getElementById('scherm').style.display = "block";
+    vecht = false;
 }
 
 function menu(){

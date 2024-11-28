@@ -121,7 +121,7 @@ body{
 .health-top{
     width: 90%;
     height: 40%;
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -209,14 +209,14 @@ body{
 }
 
 .normal-block{
-    max-width: 50px;
-    max-height: 50px;
+    max-width: 45px;
+    max-height: 45px;
     background-color: orange;
 }
 
 .selected-block{
-    max-width: 50px;
-    max-height: 50px;
+    max-width: 45px;
+    max-height: 45px;
     background-color: red;
 }
 
