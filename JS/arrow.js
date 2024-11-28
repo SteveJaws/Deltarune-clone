@@ -95,7 +95,14 @@ class Arrow{
 
         //here i am gonna check if the arrow touches the player if thats the case damage them ofcourse
 
-        if(arrowRect.left < playerRect.right && arrowRect.right > playerRect.left && arrowRect.top < playerRect.bottom && arrowRect.bottom > playerRect.top){
+        let padding = -15; // Increase this value for more forgiving hitboxes
+
+        if (
+            arrowRect.left - padding < playerRect.right + padding &&  // Expand the left edge
+            arrowRect.right + padding > playerRect.left - padding &&  // Expand the right edge
+            arrowRect.top - padding < playerRect.bottom + padding &&  // Expand the top edge
+            arrowRect.bottom + padding > playerRect.top - padding     // Expand the bottom edge
+        ) {
             takeDamage();
         }
 
