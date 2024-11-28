@@ -46,12 +46,14 @@ class Arrow{
 
         if(this.moveRight == true && this.moveDown == true){
             this.arrow.style.rotate = "130deg";
+            this.speed = this.speed * 1.2;
         }
         if(this.moveRight == true && this.moveUp == true){
             this.arrow.style.rotate = "50deg";
         }
         if(this.moveLeft == true && this.moveDown == true){
             this.arrow.style.rotate = "230deg";
+            this.speed = this.speed * 1.2;
         }
         if(this.moveLeft == true && this.moveUp == true){
             this.arrow.style.rotate = "310deg";
@@ -84,19 +86,7 @@ class Arrow{
 
         //here i am gonna check if the arrow touches the player if thats the case damage them ofcourse
 
-        if(!(currentLeft < targetLeft - this.hitBoxLengthLeft || currentLeft > targetLeft + this.hitBoxLengthRight)){
-            hitSide = true;
-        }
-        else{
-            hitSide = false;
-        }
-
-        if(!(currentTop < targetTop - this.hitBoxLengthLeft || currentTop > targetTop + this.hitBoxLengthRight)){
-            hitTop = true;
-        }
-        else{
-            hitTop = false;
-        }
+        
 
         if(hitSide == true && hitTop == true && this.dead == false){
             takeDamage();
