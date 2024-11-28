@@ -2,8 +2,8 @@ class Arrow{
     constructor(X, Y){
         this.spawnX = X;
         this.spawnY = Y;
-        this.hitBoxLengthRight = Math.ceil(window.innerWidth * 0.02); //this is almost perfect right has to be on bottom and right 
-        this.hitBoxLengthLeft = Math.ceil(window.innerWidth * 0.007); //this is almost perfect left has to be on top and left
+        this.hitBoxLengthRight = Math.ceil(window.innerWidth * 0.03); //this is almost perfect right has to be on bottom and right 
+        this.hitBoxLengthLeft = Math.ceil(window.innerWidth * 0.003); //this is almost perfect left has to be on top and left
         this.targetLeft = parseInt(player.style.left);
         this.targetTop = parseInt(player.style.top);
         this.shoot = this.shoot.bind(this);
@@ -95,7 +95,13 @@ class Arrow{
 
         //here i am gonna check if the arrow touches the player if thats the case damage them ofcourse
 
-        
+        if(currentLeft - this.hitBoxLengthLeft <= targetLeft && currentLeft + this.hitBoxLengthRight >= targetLeft){
+            hitSide = true;
+        }
+
+        if(currentTop - this.hitBoxLengthLeft <= targetTop && currentTop + this.hitBoxLengthRight >= targetTop){
+            hitTop = true;
+        }
 
         if(hitSide == true && hitTop == true && this.dead == false){
             takeDamage();

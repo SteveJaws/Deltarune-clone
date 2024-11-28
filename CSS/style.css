@@ -152,7 +152,7 @@ body{
 }
 
 .spade-projectile{
-    background-color: red;
+    background: transparent;
 }
 
 .spade-sprite{
