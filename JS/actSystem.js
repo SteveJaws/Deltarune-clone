@@ -30,5 +30,21 @@ function loadActs(){
 }
 
 function useAct(actNumber){
-    closeConsole();
+    let console = document.getElementById('consoleDiv');
+    let textConsole = document.getElementById('textConsole');
+
+    console.style.display = "none";
+    textConsole.style.display = "flex";
+
+    textConsole.innerHTML = actOptions.actOptions[actNumber].text;
+
+    setTimeout(() => {
+        textConsole.innerHTML = actOptions.actOptions[actNumber].response;
+        setTimeout(() => {
+            console.style.display = "block";
+            textConsole.style.display = "none";
+            closeConsole();
+            fight();
+        },3000)
+    },3000)
 }

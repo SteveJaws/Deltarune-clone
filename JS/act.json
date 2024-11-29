@@ -2,8 +2,8 @@
     "actOptions": [
         {
             "name": "greet",
-            "text": "you looked at the enemy and waved to him",
-            "response": "it is sarcastically smiling at you and waving back"
+            "text": "you looked at the enemy and waved at him",
+            "response": "it is sarcastically smiling and waving back"
         },
         {
             "name": "hug",
