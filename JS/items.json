@@ -2,18 +2,18 @@
     "items": [
         {
             "name": "Strawberry",
-            "amount": 4,
-            "healthPoints": 20 
+            "healthPoints": 20 ,
+            "amount": 4
         },
         {
             "name": "Dark Candy",
-            "amount": 3,
-            "healthPoints": 50
+            "healthPoints": 50,
+            "amount": 3
         },
         {
             "name": "Dark Burger",
-            "amount": 1,
-            "healthPoints": 100
+            "healthPoints": 100,
+            "amount": 1
         }
     ]
 }

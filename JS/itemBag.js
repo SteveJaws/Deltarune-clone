@@ -27,6 +27,18 @@ function loadBag(){
         itemName.innerHTML = items.items[i].name;
 
         item.appendChild(itemName);
+
+        let itemHealthPoints = document.createElement('div');
+        itemHealthPoints.classList.add('item-health-points');
+        itemHealthPoints.innerHTML = items.items[i].healthPoints + " HP";
+
+        item.appendChild(itemHealthPoints);
+
+        let itemAmount = document.createElement('div');
+        itemAmount.classList.add('item-amount');
+        itemAmount.innerHTML = "X" + items.items[i].amount;
+
+        item.appendChild(itemAmount);
     }
     //de rest van de divs moeten in item komen op volgorde
 }

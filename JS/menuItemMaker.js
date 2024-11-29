@@ -66,7 +66,6 @@ document.addEventListener("keydown", (e) => {
         audio.play();
         let chosenItem = menuItemArray[select].id;
         if(consoleOpen == true){
-            console.log(itemSelect);
         }
         if(chosenItem == "fight" && consoleOpen == false){
             fight();

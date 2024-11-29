@@ -199,7 +199,7 @@ body{
 }
 
 .console{
-   width: 90%;
+   width: 60%;
    height: 10%;
    background-color: black;
    border: 0.25vw solid white;
@@ -283,11 +283,18 @@ body{
 .item-health-points{
     width: 25%;
     height: 100%;
-    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1vw;
+    color: green;
 }
 
 .item-amount{
     width: 25%;
     height: 100%;
-    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1vw;
 }
