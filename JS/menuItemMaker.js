@@ -5,7 +5,6 @@ let optionsArray = ["fight", "act", "item", "spare", "defend"];
 let imgArray = ["sword", "act", "item", "mercy", "defend"];
 let select = 0;
 let scrollSelect = 0;
-let itemSelect = 0;
 let menuItemArray = [];
 let consoleOpen = false;
 
@@ -46,7 +45,6 @@ document.addEventListener("keydown", (e) => {
         audio.play();
         if(scrollSelect < items.items.length - 1){
             document.getElementById(scrollSelect).classList.remove('item-selected');
-            itemSelect++;
             scrollSelect++;
             document.getElementById(scrollSelect).classList.add('item-selected');
             document.getElementById(scrollSelect).scrollIntoView();
@@ -56,7 +54,6 @@ document.addEventListener("keydown", (e) => {
         audio.play();
         if(scrollSelect > 0){
             document.getElementById(scrollSelect).classList.remove('item-selected');
-            itemSelect--;
             scrollSelect--;        
             document.getElementById(scrollSelect).classList.add('item-selected');
             document.getElementById(scrollSelect).scrollIntoView();
@@ -65,24 +62,31 @@ document.addEventListener("keydown", (e) => {
     if (e.key === 'z' && vecht == false){
         audio.play();
         let chosenItem = menuItemArray[select].id;
-        if(consoleOpen == true){
-        }
         if(chosenItem == "fight" && consoleOpen == false){
             fight();
+        }
+        if(consoleOpen == true){
+            useItem(scrollSelect);
         }
         if(chosenItem == "item" && consoleOpen == false){
             loadBag();
             consoleOpen = true;
             document.getElementById(scrollSelect).classList.add('item-selected');
         }
+
     }
     if(e.key === 'x'){
         if(consoleOpen == true){
-            for(let i = 0; i < items.items.length; i++){
-                document.getElementById('item' + i).remove();
-            }
-            consoleOpen = false;
+            consoleClose();
         }
     }
     menuItemArray[select].classList.add(imgArray[select] + "_yellow");
 })
+
+function consoleClose(){
+    for(let i = 0; i < items.items.length; i++){
+        console.log('removing item')
+        document.getElementById('item' + i).remove();
+    }
+    consoleOpen = false;
+}

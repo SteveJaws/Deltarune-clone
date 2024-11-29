@@ -37,8 +37,19 @@ function loadBag(){
         let itemAmount = document.createElement('div');
         itemAmount.classList.add('item-amount');
         itemAmount.innerHTML = "X" + items.items[i].amount;
+        itemAmount.id = "amount" + i;
 
         item.appendChild(itemAmount);
     }
-    //de rest van de divs moeten in item komen op volgorde
+}
+
+function useItem(itemNumber){
+    let amount = parseInt(items.items[itemNumber].amount);
+    if(amount > 0){
+        amount--;
+        items.items[itemNumber].amount = amount;
+        document.getElementById("amount" + itemNumber).innerHTML = "X" + amount;
+        heal(items.items[itemNumber].healthPoints);
+        fight()
+    }
 }
