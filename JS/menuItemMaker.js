@@ -75,7 +75,8 @@ document.addEventListener("keydown", (e) => {
         }
 
     }
-    if(e.key === 'x'){
+    if(e.key === 'x' && vecht == false){
+        audio.play();
         if(consoleOpen == true && vecht == false){
             consoleClose();
         }
