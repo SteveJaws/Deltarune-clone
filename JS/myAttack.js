@@ -41,7 +41,7 @@ function moveBar(movingBar) {
     if(pressed == true){
         return;
     }
-    let speed = window.innerWidth * 0.005;
+    let speed = window.innerWidth * 0.002;
     let currentRight = parseInt(movingBar.style.right);
 
     movingBar.style.right = currentRight + speed + "px";

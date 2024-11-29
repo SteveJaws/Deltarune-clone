@@ -30,6 +30,7 @@ function loadActs(){
 }
 
 function useAct(actNumber){
+    vecht = true;
     let console = document.getElementById('consoleDiv');
     let textConsole = document.getElementById('textConsole');
 
