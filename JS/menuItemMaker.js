@@ -45,7 +45,7 @@ document.addEventListener("keydown", (e) => {
     }
     if(e.key === "ArrowDown" && vecht == false && consoleOpen == true){
         audio.play();
-        if(scrollSelect < items.items.length - 1){
+        if(scrollSelect < items.items.length){
             document.getElementById(scrollSelect).classList.remove('item-selected');
             scrollSelect++;
             document.getElementById(scrollSelect).classList.add('item-selected');

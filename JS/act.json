@@ -14,6 +14,11 @@
             "name": "threathen",
             "text": "you threaten the enemy",
             "response": "but it just laughs at you"
+        },
+        {
+            "name": "smalltalk",
+            "text": "nice weather huh?",
+            "response": "the enemy is not interested in smalltalk"
         }
     ]
 }
