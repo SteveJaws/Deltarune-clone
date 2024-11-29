@@ -1,0 +1,19 @@
+{
+    "actOptions": [
+        {
+            "name": "greet",
+            "text": "you looked at the enemy and waved to him",
+            "response": "it is sarcastically smiling at you and waving back"
+        },
+        {
+            "name": "hug",
+            "text": "you go in to give it a hug",
+            "response": "but it pushes you away"
+        },
+        {
+            "name": "threathen",
+            "text": "you threaten the enemy",
+            "response": "but it just laughs at you"
+        }
+    ]
+}

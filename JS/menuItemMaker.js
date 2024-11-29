@@ -7,6 +7,8 @@ let select = 0;
 let scrollSelect = 0;
 let menuItemArray = [];
 let consoleOpen = false;
+let bagOpen = false;
+let actsOpen = false;
 
 window.addEventListener("DOMContentLoaded", () => {
     for(let i = 0; i < 5; i++){
@@ -65,29 +67,44 @@ document.addEventListener("keydown", (e) => {
         if(chosenItem == "fight" && consoleOpen == false){
             fight();
         }
-        if(consoleOpen == true){
+        if(consoleOpen == true && bagOpen == true){
             useItem(scrollSelect);
+        }
+        if(consoleOpen == true && actsOpen == true){
+            useAct(scrollSelect);
         }
         if(chosenItem == "item" && consoleOpen == false){
             loadBag();
             consoleOpen = true;
+            bagOpen = true;
             document.getElementById(scrollSelect).classList.add('item-selected');
         }
-
+        if(chosenItem == "act"){
+            loadActs();
+            consoleOpen = true;
+            actsOpen = true;
+            document.getElementById(scrollSelect).classList.add('item-selected');
+        }
     }
     if(e.key === 'x' && vecht == false){
         audio.play();
-        if(consoleOpen == true && vecht == false){
-            consoleClose();
+        if(bagOpen == true){
+            closeConsole();
+        }
+        if(actsOpen == true){
+            closeConsole();
         }
     }
     menuItemArray[select].classList.add(imgArray[select] + "_yellow");
 })
 
-function consoleClose(){
-    for(let i = 0; i < items.items.length; i++){
-        console.log('removing item')
-        document.getElementById('item' + i).remove();
+function closeConsole(){
+    scrollSelect = 0;
+    let div = document.getElementById("consoleDiv");
+    while (div.firstChild) {
+        div.removeChild(div.firstChild);
     }
     consoleOpen = false;
+    bagOpen = false;
+    actsOpen = false;
 }
