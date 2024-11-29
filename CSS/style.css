@@ -232,6 +232,8 @@ body{
     margin-right: auto;
     position: relative;
     overflow: hidden;
+    align-items: center;
+    justify-content: end;
  }
 
 .normal-block{
@@ -269,9 +271,17 @@ body{
     right: 0%;
     transform: translate(-30%, -90%);
     background-image: url(./Media/king_idle.gif);
-    background-position: center;
+    background-position: bottom;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+.health-bar-enemy{
+    width: 80%;
+    height: 10%;
+    background-color:rgba(140,0,0,255);
+    position: absolute;
+    right: 0;
 }
 
 .item{

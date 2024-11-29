@@ -65,7 +65,8 @@ document.addEventListener("keydown", (e) => {
         audio.play();
         let chosenItem = menuItemArray[select].id;
         if(chosenItem == "fight" && consoleOpen == false){
-            fight();
+            myAttack();
+            consoleOpen = true;
         }
         if(consoleOpen == true && bagOpen == true){
             useItem(scrollSelect);

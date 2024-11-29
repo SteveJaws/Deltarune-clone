@@ -41,6 +41,11 @@
     height: 3vw;
     font-size: 2.3vw;
     position: absolute;
+    text-shadow: 
+        -0.2vw -0.2vw 0 black, /* Top-left shadow */
+         0.2vw -0.2vw 0 black, /* Top-right shadow */
+        -0.2vw  0.2vw 0 black, /* Bottom-left shadow */
+         0.2vw  0.2vw 0 black; /* Bottom-right shadow */
     animation: fallRightDown 1s ease-in-out;
     opacity: 1;
 }
@@ -84,4 +89,72 @@
     }
 }
 
+.damage-number-enemy{
+    display: none;
+    width: 5vw;
+    height: 5vw;
+    font-size: 2.3vw;
+    position: absolute;
+    text-shadow: 
+        -0.2vw -0.2vw 0 black, /* Top-left shadow */
+         0.2vw -0.2vw 0 black, /* Top-right shadow */
+        -0.2vw  0.2vw 0 black, /* Bottom-left shadow */
+         0.2vw  0.2vw 0 black; /* Bottom-right shadow */
+    animation: fallLeftDown 2s ease-in-out;
+    opacity: 1;
+}
 
+@keyframes fallLeftDown {
+    0% {
+        top: 0;
+        right: 0;
+    }
+    15% {
+        top: 30%;
+        right: 10%;
+    }
+    30% {
+        top: 60%;
+        right: 25%;
+    }
+    45% {
+        top: 80%;
+        right: 40%;
+    }
+    55% {
+        top: 70%; /* Hoogste punt van de stuiter omhoog */
+        right: 45%;
+        opacity: 0.75;
+    }
+    70% {
+        top: 90%;
+        right: 48%;
+        opacity: 0.50;
+    }
+    85% {
+        top: 95%; /* Kleinere stuiter omhoog */
+        right: 49%;
+        opacity: 0.25;
+    }
+    100% {
+        top: 100%;
+        right: 50%;
+        opacity: 0;
+    }
+}
+
+.colorFade{
+    animation: colorFade 1s infinite;
+}
+
+@keyframes colorFade{
+    0%{
+        background-color: rgba(0,255,255,255);
+    }
+    50%{
+        background-color: blue;
+    }
+    100%{
+        background-color: rgba(0,255,255,255);
+    }
+}
