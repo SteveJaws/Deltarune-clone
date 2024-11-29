@@ -76,7 +76,7 @@ document.addEventListener("keydown", (e) => {
 
     }
     if(e.key === 'x'){
-        if(consoleOpen == true){
+        if(consoleOpen == true && vecht == false){
             consoleClose();
         }
     }

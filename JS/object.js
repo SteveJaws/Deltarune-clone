@@ -1,7 +1,7 @@
 let player;
 let bottom;
 let immune = false;
-let health = 50;
+let health = 100;
 document.getElementById('healthNumber').innerHTML = health;
 document.getElementById('healthBar').style.width = health + "%";
 
