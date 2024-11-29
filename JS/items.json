@@ -1,0 +1,19 @@
+{
+    "items": [
+        {
+            "name": "Strawberry",
+            "amount": 4,
+            "healthPoints": 20 
+        },
+        {
+            "name": "Dark Candy",
+            "amount": 3,
+            "healthPoints": 50
+        },
+        {
+            "name": "Dark Burger",
+            "amount": 1,
+            "healthPoints": 100
+        }
+    ]
+}
