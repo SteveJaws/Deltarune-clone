@@ -1,13 +1,16 @@
 let enemyHP = 100;
+healthBarEnemyInside.style.width = enemyHP + "%";
 
 function dealDamage(damage){
     console.log("enemy has " + enemyHP + " HP");
     enemyHP = enemyHP - damage;
     if(enemyHP <= 0){
-        alert('youwin');
+        console.log('you win');
     }else{
         console.log("now the enemy has: " + enemyHP + " HP");
     }
+
+    healthBarEnemyInside.style.width = enemyHP + "%";
 
     document.getElementById('consoleDiv').style.display = "block";
     fightConsole.style.display = "none";
@@ -19,6 +22,7 @@ function dealDamage(damage){
 
         setTimeout(() => {
             fight();
+            healthBarEnemy.style.display = "none";
             consoleOpen = false;
         },500)
     },1990)

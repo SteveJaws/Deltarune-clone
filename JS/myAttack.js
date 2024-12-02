@@ -1,9 +1,13 @@
 let fightConsole = document.getElementById("fightConsole");
 let pressed = false;
 
+let healthBarEnemy = document.getElementById("healthBarEnemy");
+let healthBarEnemyInside = document.getElementById("healthBarEnemyInside");
+
 let easyMaker = innerWidth * 0.015;
 
 function myAttack() {
+    healthBarEnemy.style.display = "block";
     fightConsole.style.display = 'flex';
     document.getElementById('consoleDiv').style.display = "none";
     pressed = false;

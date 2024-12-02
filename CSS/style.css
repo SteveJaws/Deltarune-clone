@@ -282,6 +282,13 @@ body{
     background-color:rgba(140,0,0,255);
     position: absolute;
     right: 0;
+    display: none;
+}
+
+.health-bar-enemy-inside{
+    width: 100%;
+    height: 100%;
+    background-color: blue;
 }
 
 .item{
