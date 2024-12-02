@@ -3,22 +3,37 @@
         {
             "name": "greet",
             "text": "you looked at the enemy and waved at him",
-            "response": "it is sarcastically smiling and waving back"
+            "response": "it is sarcastically smiling and waving back",
+            "special": "it is sarcastically smiling and waving back, but his eyes give a dead look",
+            "order": 0
         },
         {
             "name": "hug",
             "text": "you go in to give it a hug",
-            "response": "but it pushes you away"
+            "response": "but it pushes you away",
+            "special": "it is now crying cause you are so nice to him when nobody was",
+            "order": 4
         },
         {
-            "name": "threathen",
-            "text": "you threaten the enemy",
-            "response": "but it just laughs at you"
+            "name": "check in on it",
+            "text": "you ask if it is doing okay",
+            "response": "it says i will be when i am done with you",
+            "special": "it says no i am not everyone hates me",
+            "order": 3
         },
         {
-            "name": "smalltalk",
+            "name": "the weather",
             "text": "nice weather huh?",
-            "response": "the enemy is not interested in the weather"
+            "response": "it is only interested in punching your brains out",
+            "special": "yeah i think sniff...",
+            "order": 2
+        },
+        {
+            "name": "question it?",
+            "text": "what is with your eyes",
+            "response": "it is only thinking about punching your brains out",
+            "special": "it says there is nothing wrong with my eyes",
+            "order": 1
         }
     ]
 }

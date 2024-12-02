@@ -1,4 +1,7 @@
 let actOptions;
+let order = 0;
+let crying = false;
+
 fetch("./JS/act.json")
     .then(response => {
         return response.json();
@@ -32,6 +35,15 @@ function loadActs(){
 }
 
 function useAct(actNumber){
+    let special = false;
+    if(actOptions.actOptions[actNumber].order == order){
+        console.log("correct");
+        order++;
+        special = true;
+    }
+    if(order == 5){
+        crying = true;
+    }
     kris.classList.add("kris-act");
     setTimeout(() => {
         kris.classList.remove("kris-act");
@@ -46,7 +58,12 @@ function useAct(actNumber){
         textConsole.innerHTML = actOptions.actOptions[actNumber].text;
 
         setTimeout(() => {
-            textConsole.innerHTML = actOptions.actOptions[actNumber].response;
+            if(special != true){
+                textConsole.innerHTML = actOptions.actOptions[actNumber].response;
+            }
+            else{
+                textConsole.innerHTML = actOptions.actOptions[actNumber].special;
+            }
             setTimeout(() => {
                 console.style.display = "block";
                 textConsole.style.display = "none";

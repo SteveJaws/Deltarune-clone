@@ -98,8 +98,13 @@ document.addEventListener("keydown", (e) => {
             fight();
         }
         if(chosenItem == "spare"){
-            hintPlayer("it only wants to hurt you");
-            
+            if(crying == false){
+                hintPlayer("it only wants to hurt you");
+            }
+            else{
+                alert("you won");
+            }
+
             setTimeout(() => {
                 fight();
             },3300)
