@@ -12,7 +12,9 @@ function dealDamage(damage){
     let hpPercentage = (enemyHP / maxHP) * 100;
 
     if(enemyHP <= 0){
-        console.log('you win');
+        document.getElementById("scherm").style.display = "none";
+        document.getElementById("end").style.display = "flex";
+        document.getElementById("choiceDiv").classList.add("dead");
     }else{
         console.log("now the enemy has: " + enemyHP + " HP");
     }

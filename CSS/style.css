@@ -379,3 +379,41 @@ body{
     align-items: center;
     font-size: 1vw;
 }
+
+.end{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 75vw;
+    max-height: 100vh;
+    max-width: 133.33vh;
+    margin: auto;
+    position: absolute;
+    top:0;bottom:0;
+    left:0;right:0;
+    background-color: black;
+}
+
+.dead{
+    width: 20vw;
+    height: 20vw;
+    background-image: url(./Media/King_battle_weakened.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.alive{
+    width: 20vw;
+    height: 20vw;
+    background-image: url(./Media/King_overworld_laugh-ezgif.com-webp-to-gif-converter.gif);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.dummy{
+    color: white;
+}

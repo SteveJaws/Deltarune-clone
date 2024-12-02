@@ -102,7 +102,9 @@ document.addEventListener("keydown", (e) => {
                 hintPlayer("it only wants to hurt you");
             }
             else{
-                alert("you won");
+                document.getElementById("scherm").style.display = "none";
+                document.getElementById("end").style.display = "flex";
+                document.getElementById("choiceDiv").classList.add("alive");
             }
 
             setTimeout(() => {
