@@ -32,24 +32,29 @@ function loadActs(){
 }
 
 function useAct(actNumber){
-    vecht = true;
-    let console = document.getElementById('consoleDiv');
-    let textConsole = document.getElementById('textConsole');
-
-    console.style.display = "none";
-    textConsole.style.display = "flex";
-
-    textConsole.innerHTML = actOptions.actOptions[actNumber].text;
-
+    kris.classList.add("kris-act");
     setTimeout(() => {
-        textConsole.innerHTML = actOptions.actOptions[actNumber].response;
+        kris.classList.remove("kris-act");
+
+        vecht = true;
+        let console = document.getElementById('consoleDiv');
+        let textConsole = document.getElementById('textConsole');
+
+        console.style.display = "none";
+        textConsole.style.display = "flex";
+
+        textConsole.innerHTML = actOptions.actOptions[actNumber].text;
+
         setTimeout(() => {
-            console.style.display = "block";
-            textConsole.style.display = "none";
-            closeConsole();
-            fight();
+            textConsole.innerHTML = actOptions.actOptions[actNumber].response;
+            setTimeout(() => {
+                console.style.display = "block";
+                textConsole.style.display = "none";
+                closeConsole();
+                fight();
+            },3000)
         },3000)
-    },3000)
+    },1600)
 }
 
 function hintPlayer(){

@@ -5,6 +5,10 @@ function startGame(){
     document.getElementById('start').style.display = "none";
     document.getElementById('scherm').style.display = "block";
     vecht = false;
+    document.getElementById("kris").classList.add("kris-battle-intro");
+    setTimeout(() => {
+        document.getElementById("kris").classList.remove("kris-battle-intro");
+    },1000)
 }
 
 function menu(){
