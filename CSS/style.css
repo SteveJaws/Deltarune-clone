@@ -284,6 +284,14 @@ body{
     background-image: url(./Media/King_hurt.png);
 }
 
+.enemy-attack{
+    background-image: url(./Media/King_battle_throw-ezgif.com-webp-to-gif-converter.gif);
+}
+
+.enemy-during-attack{
+    background-image: url(./Media/King_overworld_laugh-ezgif.com-webp-to-gif-converter.gif);
+}
+
 .health-bar-enemy{
     width: 80%;
     height: 10%;
