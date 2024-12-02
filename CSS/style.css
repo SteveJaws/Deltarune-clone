@@ -212,7 +212,7 @@ body{
 .consoleText{
     width: 60%;
     height: 10%;
-    font-size: 1.1vw;
+    font-size: 1.3vw;
     background-color: black;
     border: 0.25vw solid white;
     margin-left: auto;
@@ -267,6 +267,8 @@ body{
 
 .kris-act{
     background-image: url(./Media/Kris_battle_act.gif);
+    background-position: center;
+    background-size: 14vw;
 }
 
 .kris-slash{
@@ -295,7 +297,7 @@ body{
     right: 0%;
     transform: translate(-30%, -90%);
     background-image: url(./Media/king_idle.gif);
-    background-position: bottom;
+    background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -306,6 +308,7 @@ body{
 
 .enemy-attack{
     background-image: url(./Media/King_battle_throw-ezgif.com-webp-to-gif-converter.gif);
+    background-size: cover;
 }
 
 .enemy-during-attack{

@@ -54,7 +54,7 @@ function useAct(actNumber){
                 fight();
             },3000)
         },3000)
-    },1600)
+    },1000)
 }
 
 function hintPlayer(){
