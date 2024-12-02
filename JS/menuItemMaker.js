@@ -97,6 +97,13 @@ document.addEventListener("keydown", (e) => {
 
             fight();
         }
+        if(chosenItem == "spare"){
+            hintPlayer("it only wants to hurt you");
+            
+            setTimeout(() => {
+                fight();
+            },3300)
+        }
     }
     if(e.key === 'x' && vecht == false){
         audio.play();

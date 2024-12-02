@@ -57,10 +57,10 @@ function useAct(actNumber){
     },1000)
 }
 
-function hintPlayer(){
+function hintPlayer(text){
+    let message = text;
+
     vecht = true;
-    let message = "it is looking really mad right now";
-    //voor nu is message geharcoded maar als ik meerdere hints ga toevoegen kan ik message gewoon doormiddel van if statement gevarieerd maken
 
     let console = document.getElementById('consoleDiv');
     let textConsole = document.getElementById('textConsole');

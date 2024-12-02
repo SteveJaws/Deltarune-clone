@@ -19,7 +19,7 @@ function menu(){
     let chanceToSuperAttack = Math.round(Math.random() * 4);
 
     if(chanceToSuperAttack == 1){
-        hintPlayer();
+        hintPlayer("it is looking really mad right now");
         superAttack = true;
     }
 
