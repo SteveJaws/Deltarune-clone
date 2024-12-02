@@ -51,3 +51,23 @@ function useAct(actNumber){
         },3000)
     },3000)
 }
+
+function hintPlayer(){
+    vecht = true;
+    let message = "it is looking really mad right now";
+    //voor nu is message geharcoded maar als ik meerdere hints ga toevoegen kan ik message gewoon doormiddel van if statement gevarieerd maken
+
+    let console = document.getElementById('consoleDiv');
+    let textConsole = document.getElementById('textConsole');
+
+    console.style.display = "none";
+    textConsole.style.display = "flex";
+
+    textConsole.innerHTML = message;
+
+    setTimeout(() => {
+        console.style.display = "block";
+        textConsole.style.display = "none"; 
+        vecht = false;
+    },3000)
+}

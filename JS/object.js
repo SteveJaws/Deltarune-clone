@@ -23,9 +23,14 @@ window.addEventListener('DOMContentLoaded', () => {
 })
 
 function takeDamage(damage){
-    if(defending == true){
-        damage = damage - 3;
+    if(superAttack == true){
+        damage = damage * 3;
     }
+
+    if(defending == true){
+        damage = damage - 8;
+    }
+
     if(immune == false){
         health = health - damage;
         document.getElementById('damageNumber').innerHTML = damage;

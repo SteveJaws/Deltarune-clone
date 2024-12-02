@@ -1,4 +1,5 @@
 let vecht = true;
+let superAttack = false;
 
 function startGame(){
     document.getElementById('start').style.display = "none";
@@ -7,11 +8,20 @@ function startGame(){
 }
 
 function menu(){
+    defending = false;
+    vecht = false;
+    superAttack = false;
+    
+    let chanceToSuperAttack = Math.round(Math.random() * 4);
+
+    if(chanceToSuperAttack == 1){
+        hintPlayer();
+        superAttack = true;
+    }
+
     enemyAttackScreenSlideUp();
     setTimeout(() => {
         enemyDiv.classList.remove("enemy-during-attack");
-        vecht = false;
-        defending = false;
     },1000) //timer before the menu controls come back
 }
 
