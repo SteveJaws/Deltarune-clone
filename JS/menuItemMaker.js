@@ -1,6 +1,6 @@
 let options = document.getElementById("options");
 let audio = document.getElementById("menuMove");
-audio.volume = 0.2;
+audio.volume = 0.3;
 let optionsArray = ["fight", "act", "item", "spare", "defend"];
 let imgArray = ["sword", "act", "item", "mercy", "defend"];
 let select = 0;

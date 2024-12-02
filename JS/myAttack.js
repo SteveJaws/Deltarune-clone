@@ -71,7 +71,7 @@ function checkHitBox(movingBar, movingBarTarget, check) {
         ) {
             kris.classList.add("kris-slash");
             setTimeout(() => {
-                dealDamage(30);
+                dealDamage(40);
             },750)
         } else {
             kris.classList.add("kris-slash");

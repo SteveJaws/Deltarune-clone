@@ -1,7 +1,18 @@
+let chaosKing = document.getElementById("chaosKing");
+let battleStart = document.getElementById("battleStart");
+
 let vecht = true;
 let superAttack = false;
 
 function startGame(){
+    battleStart.play();
+    battleStart.volume = 0.5;
+    setTimeout(() => {
+        chaosKing.play();
+        chaosKing.volume = 0.5;
+    },1200)
+
+
     document.getElementById('start').style.display = "none";
     document.getElementById('scherm').style.display = "block";
     vecht = false;
