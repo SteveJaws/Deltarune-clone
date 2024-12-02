@@ -9,7 +9,6 @@ let keyDown = false;
 let multiplier = window.innerWidth / 100;
 let speed = 0.2 * multiplier;
 let playerIsDead = false;
-
 document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowRight' && vecht == true) {
         keyRight = true;

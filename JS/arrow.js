@@ -7,7 +7,7 @@ class Arrow{
         this.targetLeft = parseInt(player.style.left);
         this.targetTop = parseInt(player.style.top);
         this.shoot = this.shoot.bind(this);
-        this.speed = 1.4;
+        this.speed = window.innerWidth * 0.0012;
         this.dead = false;
     }
 
