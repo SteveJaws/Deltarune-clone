@@ -261,6 +261,10 @@ body{
     background-repeat: no-repeat;
 }
 
+.kris-slash{
+    background-image: url(./Media/kris_attack.gif);
+}
+
 .enemy-div{
     width: 20vw;
     height: 25vw;
@@ -274,6 +278,10 @@ body{
     background-position: bottom;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+.enemy-hurt{
+    background-image: url(./Media/King_hurt.png);
 }
 
 .health-bar-enemy{

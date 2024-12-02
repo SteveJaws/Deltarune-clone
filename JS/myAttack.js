@@ -1,3 +1,5 @@
+let kris = document.getElementById("kris");
+
 let fightConsole = document.getElementById("fightConsole");
 let pressed = false;
 
@@ -67,9 +69,15 @@ function checkHitBox(movingBar, movingBarTarget, check) {
             movingBarInfo.left < targetInfo.right + easyMaker &&
             movingBarInfo.right > targetInfo.left - easyMaker
         ) {
-            dealDamage(30);
+            kris.classList.add("kris-slash");
+            setTimeout(() => {
+                dealDamage(30);
+            },750)
         } else {
-            dealDamage(15);
+            kris.classList.add("kris-slash");
+            setTimeout(() => {
+                dealDamage(15);
+            },750)
         }
 
         setTimeout(() => {
