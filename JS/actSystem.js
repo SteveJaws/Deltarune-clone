@@ -1,5 +1,5 @@
 let actOptions;
-let order = 4;
+let order = 0;
 let crying = false;
 
 fetch("./JS/act.json")
