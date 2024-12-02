@@ -1,5 +1,6 @@
 let consoleDiv = document.getElementById('consoleDiv');
 let items;
+
 fetch("./JS/items.json")
     .then(response => {
         return response.json();
@@ -40,6 +41,8 @@ function loadBag(){
         itemAmount.id = "amount" + i;
 
         item.appendChild(itemAmount);
+
+        getLength(items.items.length - 1);
     }
 }
 

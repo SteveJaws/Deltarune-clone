@@ -26,6 +26,8 @@ function loadActs(){
         itemName.innerHTML = actOptions.actOptions[i].name;
 
         item.appendChild(itemName);
+
+        getLength(actOptions.actOptions.length - 1);
     }
 }
 

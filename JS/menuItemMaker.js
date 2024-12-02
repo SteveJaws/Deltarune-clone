@@ -9,6 +9,7 @@ let menuItemArray = [];
 let consoleOpen = false;
 let bagOpen = false;
 let actsOpen = false;
+let consoleLength;
 
 window.addEventListener("DOMContentLoaded", () => {
     for(let i = 0; i < 5; i++){
@@ -45,7 +46,7 @@ document.addEventListener("keydown", (e) => {
     }
     if(e.key === "ArrowDown" && vecht == false && consoleOpen == true){
         audio.play();
-        if(scrollSelect < items.items.length){
+        if(scrollSelect < consoleLength){
             document.getElementById(scrollSelect).classList.remove('item-selected');
             scrollSelect++;
             document.getElementById(scrollSelect).classList.add('item-selected');
@@ -108,4 +109,8 @@ function closeConsole(){
     consoleOpen = false;
     bagOpen = false;
     actsOpen = false;
+}
+
+function getLength(givenLength){
+    consoleLength = givenLength;
 }
