@@ -87,6 +87,10 @@ document.addEventListener("keydown", (e) => {
             actsOpen = true;
             document.getElementById(scrollSelect).classList.add('item-selected');
         }
+        if(chosenItem == "defend"){
+            defending = true;
+            fight();
+        }
     }
     if(e.key === 'x' && vecht == false){
         audio.play();

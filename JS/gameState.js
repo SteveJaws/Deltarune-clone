@@ -11,6 +11,7 @@ function menu(){
     setTimeout(() => {
         enemyDiv.classList.remove("enemy-during-attack");
         vecht = false;
+        defending = false;
     },1000) //timer before the menu controls come back
 }
 

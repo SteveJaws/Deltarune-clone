@@ -2,6 +2,7 @@ let player;
 let bottom;
 let immune = false;
 let health = 100;
+let defending = false;
 document.getElementById('healthNumber').innerHTML = health;
 document.getElementById('healthBar').style.width = health + "%";
 
@@ -22,6 +23,9 @@ window.addEventListener('DOMContentLoaded', () => {
 })
 
 function takeDamage(damage){
+    if(defending == true){
+        damage = damage - 3;
+    }
     if(immune == false){
         health = health - damage;
         document.getElementById('damageNumber').innerHTML = damage;
