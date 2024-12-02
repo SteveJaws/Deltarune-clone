@@ -89,6 +89,29 @@
     }
 }
 
+.heal-number{
+    display: none;
+    font-size: 2.5vw;
+    color: green;
+    text-shadow: 
+        -0.2vw -0.2vw 0 black, /* Top-left shadow */
+         0.2vw -0.2vw 0 black, /* Top-right shadow */
+        -0.2vw  0.2vw 0 black, /* Bottom-left shadow */
+         0.2vw  0.2vw 0 black; /* Bottom-right shadow */
+    position: absolute;
+    bottom: 10%;
+    animation: float-up 2s ease-in-out;
+}
+
+@keyframes float-up{
+    0%{
+        bottom: 0;
+    }
+    100%{
+        bottom: 70%;
+    }
+}
+
 .damage-number-enemy{
     display: none;
     width: 5vw;

@@ -50,6 +50,5 @@ function useItem(itemNumber){
         items.items[itemNumber].amount = amount;
         document.getElementById("amount" + itemNumber).innerHTML = "X" + amount;
         heal(items.items[itemNumber].healthPoints);
-        fight()
     }
 }

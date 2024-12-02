@@ -64,6 +64,13 @@ function heal(healAmount){
         health = 100;
     }
 
+    document.getElementById('healNumber').innerHTML = healAmount;
+    document.getElementById('healNumber').style.display = "block";
     document.getElementById('healthBar').style.width = health + "%";
     document.getElementById('healthNumber').innerHTML = health;
+
+    setTimeout(() => {
+        fight();
+        document.getElementById('healNumber').style.display = "none";
+    },1990)
 }
