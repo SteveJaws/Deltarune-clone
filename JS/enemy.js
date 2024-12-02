@@ -1,5 +1,5 @@
-let enemyHP = 100;
-healthBarEnemyInside.style.width = enemyHP + "%";
+let enemyHP = 500;
+let maxHP = enemyHP;
 
 let enemyDiv = document.getElementById("enemyDiv");
 
@@ -8,13 +8,16 @@ function dealDamage(damage){
     enemyDiv.classList.add("enemy-hurt");
     console.log("enemy has " + enemyHP + " HP");
     enemyHP = enemyHP - damage;
+
+    let hpPercentage = (enemyHP / maxHP) * 100;
+
     if(enemyHP <= 0){
         console.log('you win');
     }else{
         console.log("now the enemy has: " + enemyHP + " HP");
     }
 
-    healthBarEnemyInside.style.width = enemyHP + "%";
+    healthBarEnemyInside.style.width = hpPercentage + "%";
 
     document.getElementById('consoleDiv').style.display = "block";
     fightConsole.style.display = "none";
