@@ -89,6 +89,12 @@ document.addEventListener("keydown", (e) => {
         }
         if(chosenItem == "defend"){
             defending = true;
+
+            kris.classList.add("kris-guard");
+            setTimeout(() => {
+                kris.classList.remove("kris-guard");
+            },1000) 
+
             fight();
         }
     }

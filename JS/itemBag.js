@@ -47,11 +47,16 @@ function loadBag(){
 }
 
 function useItem(itemNumber){
-    let amount = parseInt(items.items[itemNumber].amount);
-    if(amount > 0){
-        amount--;
-        items.items[itemNumber].amount = amount;
-        document.getElementById("amount" + itemNumber).innerHTML = "X" + amount;
-        heal(items.items[itemNumber].healthPoints);
-    }
+    kris.classList.add("kris-item");
+    setTimeout(() => {
+        kris.classList.remove("kris-item");
+        let amount = parseInt(items.items[itemNumber].amount);
+        if(amount > 0){
+            amount--;
+            items.items[itemNumber].amount = amount;
+            document.getElementById("amount" + itemNumber).innerHTML = "X" + amount;
+            heal(items.items[itemNumber].healthPoints);
+        }
+    },1000)
+    
 }

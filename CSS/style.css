@@ -265,6 +265,18 @@ body{
     background-image: url(./Media/kris_attack.gif);
 }
 
+.kris-guard{
+    background-image: url(./Media/Kris_battle_guard.gif);
+}
+
+.kris-item{
+    background-image: url(./Media/Kris_battle_item.gif);
+}
+
+.kris-hurt{
+    background-image: url(./Media/Kris_battle_hurt.png);
+}
+
 .enemy-div{
     width: 20vw;
     height: 25vw;

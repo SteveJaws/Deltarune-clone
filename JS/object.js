@@ -32,6 +32,16 @@ function takeDamage(damage){
     }
 
     if(immune == false){
+        if(damage < 0){
+            damage = 0;
+        }
+        else{
+            kris.classList.add("kris-hurt");
+            setTimeout(() => {
+                kris.classList.remove("kris-hurt");
+            },700)
+        }
+        
         health = health - damage;
         document.getElementById('damageNumber').innerHTML = damage;
         document.getElementById('damageNumber').style.display = "block";
